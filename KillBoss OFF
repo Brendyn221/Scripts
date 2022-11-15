@@ -1,0 +1,10 @@
+getgenv().killBoss = false;
+
+local remotePath = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices;
+
+
+while killBoss == true do
+local args = {[1] = "Zombie"}
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer(unpack(args))
+wait()
+end
