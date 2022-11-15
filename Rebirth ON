@@ -1,0 +1,12 @@
+getgenv().autoRebirth = true;
+
+local remotePath = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices;
+
+
+while autoRebirth == true do
+
+local args = {[1] = rebirthamount}
+remotePath.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait()
+   end
+end
