@@ -1,9 +1,0 @@
-getgenv().autoTap = true;
-
-local remotePath = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices;
-
-while autoTap == true do
-local args = {[1] = 1}
-remotePath.ClickService.Click:FireServer(unpack(args))
-wait()
-end
