@@ -3,7 +3,7 @@ getgenv().buyEgg = true;
 local remotePath = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices;
 
 while buyEgg == true do 
- local args = {[1] = "Deluxe"}
+ local args = {[1] = "deluxe"}
  remotePath.EggService.Purchase:FireServer(unpack(args))
  wait()
  end
