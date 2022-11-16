@@ -1,0 +1,522 @@
+getgenv().autoTap = true;
+getgenv().autoRebirth = true;
+getgenv().buyEgg = true;
+getgenv().killBoss = true;
+
+
+local remotePath = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices;
+
+
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("🎃HALLOWEEN!🎃 Clicker Madness SCRIPT!😈", "Ocean")
+
+
+
+local Tab = Window:NewTab("AutoFarming")
+
+local Section = Tab:NewSection("Auto Farming")
+
+Section:NewToggle("Auto Clicker", "Auto Gains Clicks", function(state)
+   if state then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/Protected%20ON.lua"))()
+   else
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/Auto%20Clicker%20OFF.txt"))()
+   end
+end)
+
+
+   Section:NewToggle("Auto Rebirth (Begineers Only)", "Auto Rebirths For You", function(state)
+      if state then
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/Auto%20Rebirth%20ON"))()
+      else
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/Auto%20Rebirth%20OFF"))()
+      end
+  end)
+
+
+  Section:NewToggle("Auto Kill Boss", "Helps Kill The Boss", function(state)
+   if state then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/KillBoss%20ON"))()
+   else
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/KillBoss%20OFF"))()
+   end
+end)
+
+
+local Tab = Window:NewTab("Buying")
+
+local Section = Tab:NewSection("Buying")
+
+   Section:NewToggle("Buy Basic Eggs", "Buys Basic Eggs For You", function(state)
+      if state then
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/BuyBasicEgg%20ON"))()
+      else
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/BuyBasicEgg%20OFF"))()
+      end
+  end)
+
+
+ 
+
+Section:NewToggle("Buy Premium Eggs (GAMEPASS)", "Buys Premium Eggs For You", function(state)
+   if state then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/BuyPremiumEgg%20ON"))()
+   else
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/BuyPremiumEgg%20OFF"))()
+   end
+end)
+
+
+Section:NewToggle("Buy Lazarbeam Deluxe Eggs (GAMEPASS)", "Buys Lazarbeam Deluxe Eggs", function(state)
+   if state then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/BuyDeluxeEgg%20ON"))()
+   else
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/BuyDeluxeEgg%20OFF"))()
+   end
+end)
+
+
+Section:NewToggle("Buy Lazarbeam Omega Eggs (GAMEPASS)", "Buys Lazarbeam Omega Eggs", function(state)
+   if state then
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/BuyOmegaEgg%20ON"))()
+   else
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Brendyn221/Scripts/main/BuyOmegaEgg%20OFF"))()
+   end
+end)
+
+
+
+
+local Tab = Window:NewTab("Teleport")
+
+local Section = Tab:NewSection("Teleport")
+
+
+
+
+Section:NewButton("Desert World", "Teleports You To The Desert World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Desert')
+end)
+
+
+
+
+Section:NewButton("Winter World", "Teleports You To The Winter World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Winter')
+end)
+
+
+
+
+Section:NewButton("Lava World", "Teleports You To The Lava World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Lava')
+end)
+
+
+
+
+Section:NewButton("Toxic World", "Teleports You To The Toxic World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Toxic')
+end)
+
+
+
+
+Section:NewButton("Ocean World", "Teleports You To The Ocean World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Ocean')
+end)
+
+
+
+
+Section:NewButton("Candy World", "Teleports You To The Winter World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Candy')
+end)
+
+
+
+
+Section:NewButton("Space World", "Teleports You To The Space World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Space')
+end)
+
+
+
+
+Section:NewButton("Forest World", "Teleports You To The Forest World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Forest')
+end)
+
+
+
+
+Section:NewButton("City World", "Teleports You To The City World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('City')
+end)
+
+
+
+
+Section:NewButton("Blocks World", "Teleports You To The Blocks World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Blocks')
+end)
+
+
+
+
+Section:NewButton("Future World", "Teleports You To The Future World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Future')
+end)
+
+
+
+Section:NewButton("Infinity World", "Teleports You To The Infinity World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Infinity')
+end)
+
+
+
+Section:NewButton("Moon World", "Teleports You To The Moon World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Moon')
+end)
+
+
+
+Section:NewButton("Fire World", "Teleports You To The Fire World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Fire')
+end)
+
+
+
+Section:NewButton("Dominus World", "Teleports You To The Dominus World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Dominus')
+end)
+
+
+
+Section:NewButton("Storm World", "Teleports You To The Storm World", function()
+   function getCurrentPlayerPOS()
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+      return plyr.Character.HumanoidRootPart.Position;
+      end
+      return false;
+   end
+  
+   function teleportTO(placeCFrame)
+      local plyr = game.Players.LocalPlayer;
+      if plyr.Character then
+          plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+      end
+   end
+  function teleportWorld(world)
+  if game:GetService("Workspace").Worlds:FindFirstChild(world) then
+     teleportTO(game:GetService("Workspace").Worlds[world].Teleport.CFrame)
+    end
+  end
+  teleportWorld('Storm')
+end)
+
+
+local Tab = Window:NewTab("Other")
+
+local Section = Tab:NewSection("Other")
+
+Section:NewButton("Infinte Yield", "Gives You Infinite Yield", function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+local Tab = Window:NewTab("Credits")
+
+local Section = Tab:NewSection("Credits")
+
+Section:NewButton("Discord > Brendyn#0488", "Creator of This Script", function()
+end) 
